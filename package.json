@@ -3,6 +3,7 @@
   "version": "2.0.0",
   "type": "module",
   "description": "Стартовый шаблон сборки Лиги А",
+  "homepage": "https://siestaa.github.io/Cruises-to-Antarctica/",
   "browserslist": [
     "last 3 versions",
     "IE 11",
@@ -15,7 +16,9 @@
     "build": "cross-env NODE_ENV=production gulp build",
     "dev": "cross-env NODE_ENV=production gulp dev",
     "start": "cross-env NODE_ENV=development gulp start",
-    "webp": "gulp webp"
+    "webp": "gulp webp",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "editorconfig-cli": [
     "*.json",
