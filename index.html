@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Это волшебное путешествие поможет вам познакомиться поближе с удивительным миром Антарктики. Наш круизный лайнер отвезет вас на край Земли, где вы сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и многое другое.">
+  <title>Круизы в&nbsp;Антарктику</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <header class="header" data-header="">
+        <a class="header__logo" href="index.html" aria-label="Переход на главную страницу">
+          <svg class="header__logo-icon" width="70" height="38" viewBox="0 0 70 38" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="img/sprite.svg#main-logo"></use>
+          </svg>
+        </a>
+        <nav class="header__nav">
+          <ul class="header__list">
+            <li class="header__item"><a class="header__link" href="#feature">Преимущества</a></li>
+            <li class="header__item"><a class="header__link" href="#">Направления</a></li>
+            <li class="header__item"><a class="header__link" href="#cruises">Ближайшие круизы</a></li>
+            <li class="header__item"><a class="header__link" href="#contact">Контакты</a></li>
+          </ul>
+        </nav>
+        <button class="header__burger" type="button" aria-label="Переключатель отображения меню" aria-pressed="false"
+          data-burger=""><span class="header__burger-text">
+            <svg width="24" height="12" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="img/sprite.svg#burger"></use>
+            </svg>
+          </span>
+          <svg class="header__burger-icon" width="13" height="13" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="img/sprite.svg#burger-close"></use>
+          </svg>
+        </button>
+
+      </header>
+    </div>
+    <main>
+      <div class="container">
+        <section class="info">
+          <picture>
+            <source type="image/webp" media="(max-width: 767px)"
+              srcset="./img/intro-back-mobile.webp 1x, ./img/intro-back-mobile@2x.webp 2x">
+            <source type="image/webp" srcset="/img/intro-back.webp 1x, /img/intro-back@2x.webp 2x">
+            <source media="(max-width: 767px)" srcset="./img/intro-back-mobile.jpg 1x, ./img/intro-back-mobile@2x.jpg 2x">
+            <img class="info__back" src="/img/intro-back.jpg" srcset="/img/intro-back@2x.jpg 2x" width="1366"
+              height="650" alt="">
+          </picture>
+          <h1 class="info__title">Круизы в&nbsp;Антарктику</h1>
+          <p class="info__text">Волшебный мир айсбергов и&nbsp;пингвинов</p>
+        </section>
+      </div>
+      <div class="container">
+        <section class="description">
+          <div class="description__text-wrapper">
+            <h2 class="description__title">Путешествие на&nbsp;край Земли</h2>
+            <p class="description__text">Это волшебное путешествие поможет вам познакомиться поближе с&nbsp;удивительным
+              миром Антарктики. Наш круизный лайнер отвезет вас на&nbsp;край Земли, где вы&nbsp;сможете увидеть: ледяные
+              айсберги, несколько видов пингвинов, китов, морских котиков и&nbsp;многое другое.</p>
+          </div>
+          <picture>
+            <source type="image/webp" media="(max-width: 767px)"
+              srcset="./img/pingvi-mobile.webp 1x, ./img/pingvi-mobile@2x.webp 2x">
+            <source type="image/webp" srcset="/img/pingvi.webp 1x, /img/pingvi@2x.webp 2x">
+            <source media="(max-width: 767px)" srcset="./img/pingvi-mobile.jpg 1x, ./img/pingvi-mobile@2x.jpg 2x">
+            <img class="description__img" src="/img/pingvi.jpg" srcset="/img/pingvi@2x.jpg 2x" width="560" height="301"
+              alt="" loading="lazy">
+          </picture>
+        </section>
+      </div>
+      <div class="section-wrapper">
+        <div class="container">
+          <section class="feature" id="feature">
+            <picture>
+              <source type="image/webp" srcset="/img/feature-back.webp 1x, /img/feature-back@2x.webp 2x">
+              <img class="feature__back" src="/img/feature-back.jpg" srcset="/img/feature-back@2x.jpg 2x" width="1366"
+                height="562" alt="" loading="lazy">
+            </picture>
+            <h2 class="feature__title">Преимущества</h2>
+            <ul class="feature__list">
+              <li class="feature__item">
+                <svg class="feature__icon feature__icon--ship" width="27" height="32" viewBox="0 0 27 32" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#ship"></use>
+                </svg>
+                <h3 class="feature__item-title">Небольшой круизный лайнер</h3>
+                <p class="feature__item-text">Круизный лайнер, рассчитанный всего лишь на&nbsp;300&nbsp;гостей, поможет
+                  избежать шума и&nbsp;очередей и&nbsp;даст возможность насладиться видами и&nbsp;природой.</p>
+              </li>
+              <li class="feature__item">
+                <svg class="feature__icon feature__icon--tick" width="38" height="32" viewBox="0 0 38 32" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#tick"></use>
+                </svg>
+                <h3 class="feature__item-title">Система все включено</h3>
+                <p class="feature__item-text">Все наши круизы работают по&nbsp;системе &laquo;Все Включено&raquo;.
+                  Великолепные блюда и&nbsp;безлимитный бар доступны для вас 24&nbsp;часа.</p>
+              </li>
+              <li class="feature__item">
+                <svg class="feature__icon feature__icon--boat" width="44" height="32" viewBox="0 0 44 32" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#boat"></use>
+                </svg>
+                <h3 class="feature__item-title">Экскурсионные туры на&nbsp;Zodiac</h3>
+                <p class="feature__item-text">Экскурсионные туры к&nbsp;берегам Антарктиды совершаются
+                  на&nbsp;оборудованных лодках типа Zodiac c&nbsp;опытными экскурсоводами.</p>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </div>
+      <div class="container">
+        <section class="cruises" id="cruises">
+          <h2 class="cruises__title">Ближайшие круизы</h2>
+          <ul data-list="offers" class="cruises__list">
+          </ul>
+        </section>
+      </div>
+      <div class="section-wrapper">
+        <div class="container">
+          <section id="book" class="book">
+            <div class="book__back">
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="./img/form-back-mobile.webp 1x, ./img/form-back-mobile@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1023px)"
+                  srcset="./img/form-back-tablet.webp 1x, ./img/form-back-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="/img/form-back.webp 1x, /img/form-back@2x.webp 2x">
+                <source media="(max-width: 767px)"
+                  srcset="./img/form-back-mobile.jpg 1x, ./img/form-back-mobile@2x.jpg 2x">
+                <source media="(max-width: 1023px)"
+                  srcset="./img/form-back-tablet.jpg 1x, ./img/form-back-tablet@2x.jpg 2x">
+                <img class="book__back" src="/img/form-back.jpg" srcset="/img/form-back@2x.jpg 2x" width="1366"
+                  height="650" alt="" loading="lazy">
+              </picture>
+            </div>
+            <div class="book__container">
+              <div class="book__text-container">
+                <h2 class="book__title">Раннее бронирование</h2>
+                <p class="book__text">Забронируйте тур за&nbsp;3-6 месяцев до&nbsp;даты выезда и&nbsp;сэкономьте
+                  до&nbsp;50%</p>
+              </div>
+              <div class="book__form-wrapper" data-form-validate data-callback="base" data-parent-validate="base"
+                data-message-base="Заполните все данные" data-message-extra="Неверный ввод данных">
+                <form action="https://echo.htmlacademy.ru/" method="post" class="book__form" autocomplete="off">
+                  <p class="book__form-text">Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время
+                  </p>
+                  <div class="book__custom-input custom-input book__custom-input--input" data-validate-type="text"
+                    data-limitation="name" data-message-base="Поле обязательно к заполнению"
+                    data-message-extra="Проверьте корректность заполнения поля" data-required="">
+                    <input name="name" type="text" placeholder="Имя" aria-label="Поле для ввода имени.">
+                  </div>
+                  <div class="book__custom-input custom-input book__custom-input--input" data-validate-type="phone"
+                    data-on-input-validate="" data-message-base="Поле обязательно к заполнению"
+                    data-message-extra="Проверьте корректность заполнения поля"
+                    data-message-success="Поле заполнено верно" data-required data-phone-length="18">
+                    <input data-input="tel" name="tel" type="tel" placeholder="Телефон"
+                      aria-label="Поле для ввода телефона.">
+                  </div>
+                  <div class="book__custom-input custom-input book__custom-input--input" data-validate-type="email"
+                    data-required data-on-input-validate="" data-message-base="Поле обязательно к заполнению"
+                    data-message-extra="Проверьте корректность заполнения поля"
+                    data-message-success="Поле заполнено верно">
+                    <input type="email" name="email" placeholder="Email">
+                    </label>
+                  </div>
+                  <div class="book__custom-toggle custom-toggle custom-toggle--checkbox" data-validate-type="checkbox"
+                    data-message-base="Поле обязательно к заполнению">
+                    <label data-label="checkbox" class="book__agreed-text book__checkbox">
+                      <input data-input="checkbox" name="agreed" value="agreed" type="checkbox">
+                      <div class="book__checkbox-icon-wrapper">
+                        <svg data-icon="checkbox" class="book__checkbox-icon book__checkbox-icon--hide" width="10"
+                          height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <use xlink:href="img/sprite.svg#check"></use>
+                        </svg>
+                      </div>
+                      Я&nbsp;согласен на&nbsp;обработку моих персональных данных
+                    </label>
+                  </div>
+                  <button type="submit" class="book__button">Оставить заявку</button>
+                </form>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <div class="container">
+        <section class="map" id="contact">
+          <div class="map__field">
+            <picture>
+              <source type="image/webp" srcset="/img/map.webp 1x, /img/map@2x.webp 2x">
+              <img class="map__img js-off" src="/img/map.jpg" srcset="/img/map@2x.jpg 2x" width="560" height="301"
+                alt="" loading="lazy">
+            </picture>
+            <iframe class="map__frame"
+              src="https://yandex.ru/map-widget/v1/?um=constructor%3A48136933732f121b5af589f45ea47d13b030829420db6ec2e1ecff9b849f7f9b&amp;source=constructor"
+              frameborder="0"></iframe>
+          </div>
+          <div class="map__text-wrapper">
+            <h2 class="map__title visually-hidden">Как нас найти.</h2>
+            <p class="map__text">У&nbsp;вас ещё остались вопросы или сомнения?
+              Приезжайте к&nbsp;нам в&nbsp;офис и&nbsp;мы&nbsp;вам все расскажем.</p>
+            <address class="map__address">
+              <svg class="map__address-icon" width="18" height="22" viewBox="0 0 18 22"
+                xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/sprite.svg#geo"></use>
+              </svg>
+              <div class="map__address-text-wrapper">
+                <span class="map__address-text">г. Санкт Петербург,</span>
+                <span class="map__address-text">ул. Большая Конюшенная, 19/8</span>
+              </div>
+            </address>
+            <a href="tel:88002000000" class="map__phone">
+              <svg class="map__address-icon" width="18" height="18" viewBox="0 0 18 18"
+                xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/sprite.svg#phone"></use>
+              </svg>
+              8-800-200-00-00</a>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+        <nav class="footer">
+          <a href="index.html" class="footer__logo">
+            <svg class="footer__logo-icon" width="70" height="38" viewBox="0 0 70 38" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="img/sprite.svg#main-logo"></use>
+            </svg>
+          </a>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a class="footer__link" href="#">Преимущества</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Направления</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Ближайшие круизы</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Контакты</a>
+            </li>
+          </ul>
+          <ul class="footer__social">
+            <li class="footer__social-item">
+              <a href="https://ok.ru/" class="footer__social-link">
+                <svg class="footer__social-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                  viewbox="0 0 12 20">
+                  <use xlink:href="img/sprite.svg#ok"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer__social-item">
+              <a href="https://dzen.ru/" class="footer__social-link">
+                <svg class="footer__social-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                  viewbox="0 0 20 20">
+                  <use xlink:href="img/sprite.svg#dzen"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer__social-item">
+              <a href="https://www.reddit.com" class="footer__social-link">
+                <svg class="footer__social-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                  viewbox="0 0 20 20">
+                  <use xlink:href="img/sprite.svg#reddit"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  </div>
+  <!-- Модалки -->
+  <div class="modal modal--preload" data-modal="book">
+    <div class="modal__wrapper">
+      <div class="modal__overlay" data-close-modal></div>
+      <div class="modal__content">
+        <p class="modal__description">Обычная модалка</p>
+        <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
+          <svg width="15" height="15">
+            <use xlink:href="img/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
+    <div class="modal__wrapper">
+      <div class="modal__overlay" data-close-modal></div>
+      <div class="modal__content">
+        <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл
+        </p>
+        <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
+          <svg width="15" height="15">
+            <use xlink:href="img/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <template id="cruise">
+    <li data-item="cruise" class="cruises__item">
+      <picture>
+        <source data-img="source" type="image/webp" srcset="">
+        <img data-img="img" src="" srcset="" width="260" height="386" alt="" loading="lazy">
+      </picture>
+      <h3 data-value="title" class="cruises__item-title"></h3>
+      <dt class="cruises__item-option">Маршрут</dt>
+      <dd data-value="way" class="cruises__item-value"></dd>
+      <dt class="cruises__item-option">Порт отправления</dt>
+      <dd data-value="port" class="cruises__item-value"></dd>
+      <dt class="cruises__item-option">Продолжительность</dt>
+      <dd data-value="duration" class="cruises__item-value"></dd>
+      <dt class="cruises__item-option">Цена</dt>
+      <dd data-value="price" class="cruises__item-value"></dd>
+      <button type="button" class="cruises__button">Забронировать</button>
+    </li>
+  </template>
+
+  <script src="js/vendor.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>
