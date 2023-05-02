@@ -146,9 +146,11 @@
     color: rgba(1, 28, 64, 0.7);
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     outline: 2px solid rgba(255, 255, 255, 0.55);
   }
+
 }
 
 .book__cusom-toggle label {
@@ -165,7 +167,12 @@
   gap: 0;
   margin-top: 10px;
 
-  &:hover {
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+
+  &:has(input:focus) {
     text-decoration: underline;
   }
 
@@ -213,7 +220,8 @@
     margin-top: 20px;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: $color-text-black;
     color: $color-text-white;
     outline: 2px solid $color-text-white;

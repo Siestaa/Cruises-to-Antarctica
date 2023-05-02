@@ -1003,7 +1003,8 @@ button,
   justify-content: flex-end;
 }
 
-.cruises__item:hover {
+.cruises__item:hover,
+.cruises__item:focus {
   background-color: #011c40;
   -webkit-box-pack: start;
   -ms-flex-pack: start;
@@ -1012,34 +1013,40 @@ button,
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
+  outline: none;
 }
 
-.cruises__item:hover img {
+.cruises__item:hover img,
+.cruises__item:focus img {
   opacity: 0;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
 }
 
-.cruises__item:hover .cruises__item-title {
+.cruises__item:hover .cruises__item-title,
+.cruises__item:focus .cruises__item-title {
   margin-bottom: 15px;
   -webkit-transform: translate(0);
   -ms-transform: translate(0);
   transform: translate(0);
 }
 
-.cruises__item:hover .cruises__item-option {
+.cruises__item:hover .cruises__item-option,
+.cruises__item:focus .cruises__item-option {
   display: block;
   margin: 0;
 }
 
-.cruises__item:hover .cruises__item-value {
+.cruises__item:hover .cruises__item-value,
+.cruises__item:focus .cruises__item-value {
   display: block;
   margin: 0;
   margin-bottom: 13px;
 }
 
-.cruises__item:hover .cruises__button {
+.cruises__item:hover .cruises__button,
+.cruises__item:focus .cruises__button {
   display: block;
   margin-top: 12px;
 }
@@ -1240,7 +1247,8 @@ button,
   color: rgba(1, 28, 64, 0.7);
 }
 
-.book__custom-input input:hover {
+.book__custom-input input:hover,
+.book__custom-input input:focus {
   outline: 2px solid rgba(255, 255, 255, 0.55);
 }
 
@@ -1263,7 +1271,12 @@ button,
   margin-top: 10px;
 }
 
-.book__agreed-text:hover {
+.book__agreed-text:hover,
+.book__agreed-text:focus {
+  text-decoration: underline;
+}
+
+.book__agreed-text:has(input:focus) {
   text-decoration: underline;
 }
 
@@ -1305,7 +1318,8 @@ button,
   line-height: 150%;
 }
 
-.book__button:hover {
+.book__button:hover,
+.book__button:focus {
   background-color: #011c40;
   color: #f9fbfd;
   outline: 2px solid #f9fbfd;
