@@ -583,6 +583,7 @@ button,
 .section-wrapper {
   position: relative;
   width: 100vw;
+  background-color: #ffffff;
 }
 
 .rouble {
@@ -873,7 +874,7 @@ button,
   width: 100%;
 }
 
-.description__title {
+.description h2 {
   font-weight: 600;
   font-size: 28px;
   line-height: 150%;
@@ -882,7 +883,7 @@ button,
   margin-bottom: 27px;
 }
 
-.description__text {
+.description p {
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
@@ -890,7 +891,7 @@ button,
   margin: 0;
 }
 
-.description__img {
+.description img {
   width: 100%;
 }
 
@@ -907,7 +908,6 @@ button,
   position: absolute;
   width: 100vw;
   height: 100%;
-  z-index: -1;
   top: 0;
   left: 0;
 }
@@ -920,6 +920,8 @@ button,
   text-align: center;
   margin: 0;
   margin-bottom: 49px;
+  z-index: 2;
+  position: relative;
 }
 
 .feature__list {
@@ -937,6 +939,8 @@ button,
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
+  z-index: 2;
+  position: relative;
 }
 
 .feature__item {
@@ -1118,6 +1122,7 @@ button,
   min-height: -moz-fit-content;
   min-height: fit-content;
   padding: 50px 60px;
+  z-index: 1;
 }
 
 .book__back {
@@ -1126,7 +1131,6 @@ button,
   top: 0;
   height: 100%;
   width: 100%;
-  z-index: -1;
   -o-object-fit: fill;
   object-fit: fill;
 }
@@ -1145,6 +1149,8 @@ button,
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  z-index: 2;
+  position: relative;
 }
 
 .book__text-container {
@@ -1933,6 +1939,7 @@ button,
   -ms-flex: 1;
   flex: 1;
   height: 100%;
+  border: none;
 }
 
 footer {
@@ -2226,7 +2233,7 @@ footer {
     margin-top: -10px;
   }
 
-  .description__title {
+  .description h2 {
     font-size: 26px;
     line-height: 140%;
     max-width: 210px;
@@ -2473,7 +2480,7 @@ footer {
     gap: 43px;
   }
 
-  .description__title {
+  .description h2 {
     font-size: 24px;
     margin-bottom: 18px;
   }
