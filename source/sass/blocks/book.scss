@@ -3,6 +3,7 @@
   margin: 0 auto;
   min-height: fit-content;
   padding: 50px 60px;
+  z-index: 1;
 
   @include vp-1023 {
     padding: 88px 0 100px;
@@ -19,7 +20,6 @@
   top: 0;
   height: 100%;
   width: 100%;
-  z-index: -1;
   object-fit: fill;
 }
 
@@ -31,6 +31,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 2;
+  position: relative;
 
   @include vp-1023 {
     flex-direction: column;
@@ -150,7 +152,6 @@
   &:focus {
     outline: 2px solid rgba(255, 255, 255, 0.55);
   }
-
 }
 
 .book__cusom-toggle label {

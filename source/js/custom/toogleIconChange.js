@@ -11,7 +11,9 @@ const checkValid = () => {
 };
 
 const changeIcon = () => {
-  checkbox.addEventListener('change', checkValid);
+  if (toggleIcon) {
+    checkbox.addEventListener('change', checkValid);
+  }
 };
 
 export {changeIcon};

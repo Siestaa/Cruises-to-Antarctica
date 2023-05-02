@@ -62,8 +62,8 @@
       <div class="container">
         <section class="description">
           <div class="description__text-wrapper">
-            <h2 class="description__title">Путешествие на&nbsp;край Земли</h2>
-            <p class="description__text">Это волшебное путешествие поможет вам познакомиться поближе с&nbsp;удивительным
+            <h2>Путешествие на&nbsp;край Земли</h2>
+            <p>Это волшебное путешествие поможет вам познакомиться поближе с&nbsp;удивительным
               миром Антарктики. Наш круизный лайнер отвезет вас на&nbsp;край Земли, где вы&nbsp;сможете увидеть: ледяные
               айсберги, несколько видов пингвинов, китов, морских котиков и&nbsp;многое другое.</p>
           </div>
@@ -72,8 +72,8 @@
               srcset="./img/pingvi-mobile.webp 1x, ./img/pingvi-mobile@2x.webp 2x">
             <source type="image/webp" srcset="./img/pingvi.webp 1x, ./img/pingvi@2x.webp 2x">
             <source media="(max-width: 767px)" srcset="./img/pingvi-mobile.jpg 1x, ./img/pingvi-mobile@2x.jpg 2x">
-            <img class="description__img" src="./img/pingvi.jpg" srcset="./img/pingvi@2x.jpg 2x" width="560" height="301"
-              alt="" loading="lazy">
+            <img src="./img/pingvi.jpg" srcset="./img/pingvi@2x.jpg 2x" width="560" height="301"
+              alt="Фото пингвинов." loading="lazy">
           </picture>
         </section>
       </div>
@@ -174,18 +174,17 @@
                     data-message-extra="Проверьте корректность заполнения поля"
                     data-message-success="Поле заполнено верно">
                     <input type="email" name="email" placeholder="Email">
-                    </label>
                   </div>
                   <div class="book__custom-toggle custom-toggle custom-toggle--checkbox" data-validate-type="checkbox"
                     data-message-base="Поле обязательно к заполнению">
                     <label data-label="checkbox" class="book__agreed-text book__checkbox">
                       <input data-input="checkbox" name="agreed" value="agreed" type="checkbox">
-                      <div class="book__checkbox-icon-wrapper">
+                      <span class="book__checkbox-icon-wrapper">
                         <svg data-icon="checkbox" class="book__checkbox-icon book__checkbox-icon--hide" width="10"
                           height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <use xlink:href="./img/sprite.svg#check"></use>
                         </svg>
-                      </div>
+                      </span>
                       Я&nbsp;согласен на&nbsp;обработку моих персональных данных
                     </label>
                   </div>
@@ -205,8 +204,7 @@
                 alt="" loading="lazy">
             </picture>
             <iframe class="map__frame"
-              src="https://yandex.ru/map-widget/v1/?um=constructor%3A48136933732f121b5af589f45ea47d13b030829420db6ec2e1ecff9b849f7f9b&amp;source=constructor"
-              frameborder="0"></iframe>
+              src="https://yandex.ru/map-widget/v1/?um=constructor%3A48136933732f121b5af589f45ea47d13b030829420db6ec2e1ecff9b849f7f9b&amp;source=constructor"></iframe>
           </div>
           <div class="map__text-wrapper">
             <h2 class="map__title visually-hidden">Как нас найти.</h2>
