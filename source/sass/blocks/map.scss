@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 100px;
+  gap: 8.6%;
   max-width: 1160px;
   margin: 0 auto;
 
@@ -110,6 +110,11 @@
   font-size: 16px;
   line-height: 150%;
   color: $color-text-black;
+  width: fit-content;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .map__phone-icon {

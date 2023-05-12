@@ -109,6 +109,8 @@ footer {
 
   @include vp-767 {
     margin-left: -5px;
+    min-width: none;
+    justify-content: flex-start;
   }
 }
 

@@ -54,6 +54,11 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
 
   &:hover,
   &:focus {
@@ -85,7 +90,7 @@
     }
 
     & .cruises__button {
-      display: block;
+      display: flex;
       margin-top: 12px;
     }
   }
@@ -111,7 +116,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: fill;
   z-index: -1;
   top: 0;
   left: 0;
@@ -166,4 +171,11 @@
   padding: 10px 0;
   justify-self: flex-end;
   cursor: pointer;
+
+
+  &:hover {
+    color: $color-text-white;
+    background-color: $color-text-black;
+    outline: 2px solid $color-text-white;
+  }
 }

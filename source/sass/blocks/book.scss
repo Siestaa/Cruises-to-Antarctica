@@ -148,8 +148,7 @@
     color: rgba(1, 28, 64, 0.7);
   }
 
-  &:hover,
-  &:focus {
+  &:hover {
     outline: 2px solid rgba(255, 255, 255, 0.55);
   }
 }
@@ -168,13 +167,20 @@
   gap: 0;
   margin-top: 10px;
 
-  &:hover,
-  &:focus {
+  &:hover {
     text-decoration: underline;
+
+    & .book__checkbox-icon-wrapper {
+      transform: scale(1.1);
+    }
   }
 
   &:has(input:focus) {
     text-decoration: underline;
+
+    & .book__checkbox-icon-wrapper {
+      transform: scale(1.1);
+    }
   }
 
   @include vp-767 {
@@ -207,7 +213,7 @@
   display: none;
 }
 
-.book__button {
+.book button {
   padding: 11px 0;
   width: 100%;
   border: none;
@@ -216,13 +222,13 @@
   font-weight: 600;
   font-size: 14px;
   line-height: 150%;
+  background-color: $color-default-white;
 
   @include vp-767 {
     margin-top: 20px;
   }
 
-  &:hover,
-  &:focus {
+  &:hover {
     background-color: $color-text-black;
     color: $color-text-white;
     outline: 2px solid $color-text-white;

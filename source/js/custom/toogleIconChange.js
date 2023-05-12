@@ -7,6 +7,7 @@ const checkValid = () => {
   } else {
     toggleIcon.classList.add('book__checkbox-icon--hide');
   }
+  checkbox.blur();
 
 };
 

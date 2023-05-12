@@ -637,6 +637,13 @@ button,
   outline: none;
 }
 
+button {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 .container {
   width: 100%;
   max-width: 1920px;
@@ -806,11 +813,10 @@ button,
 
 .info__back {
   position: absolute;
-  top: 0;
+  top: -80px;
   left: 0;
   width: 100vw;
-  z-index: -1;
-  height: 650px;
+  height: 114%;
   -o-object-fit: fill;
   object-fit: fill;
   background-color: #011c40;
@@ -831,6 +837,7 @@ button,
   display: inline-block;
   margin: 0;
   margin-bottom: 13px;
+  z-index: 2;
 }
 
 .info__text {
@@ -847,6 +854,7 @@ button,
   width: fit-content;
   display: inline-block;
   margin: 0;
+  z-index: 2;
 }
 
 .description {
@@ -1005,6 +1013,11 @@ button,
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
+  overflow-y: scroll;
+}
+
+.cruises__item::-webkit-scrollbar {
+  width: 0;
 }
 
 .cruises__item:hover,
@@ -1051,7 +1064,9 @@ button,
 
 .cruises__item:hover .cruises__button,
 .cruises__item:focus .cruises__button {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin-top: 12px;
 }
 
@@ -1059,8 +1074,8 @@ button,
   position: absolute;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
+  -o-object-fit: fill;
+  object-fit: fill;
   z-index: -1;
   top: 0;
   left: 0;
@@ -1113,6 +1128,12 @@ button,
   padding: 10px 0;
   justify-self: flex-end;
   cursor: pointer;
+}
+
+.cruises__button:hover {
+  color: #f9fbfd;
+  background-color: #011c40;
+  outline: 2px solid #f9fbfd;
 }
 
 .book {
@@ -1253,8 +1274,7 @@ button,
   color: rgba(1, 28, 64, 0.7);
 }
 
-.book__custom-input input:hover,
-.book__custom-input input:focus {
+.book__custom-input input:hover {
   outline: 2px solid rgba(255, 255, 255, 0.55);
 }
 
@@ -1277,13 +1297,24 @@ button,
   margin-top: 10px;
 }
 
-.book__agreed-text:hover,
-.book__agreed-text:focus {
+.book__agreed-text:hover {
   text-decoration: underline;
+}
+
+.book__agreed-text:hover .book__checkbox-icon-wrapper {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .book__agreed-text:has(input:focus) {
   text-decoration: underline;
+}
+
+.book__agreed-text:has(input:focus) .book__checkbox-icon-wrapper {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .book__agreed-text input {
@@ -1313,7 +1344,7 @@ button,
   display: none;
 }
 
-.book__button {
+.book button {
   padding: 11px 0;
   width: 100%;
   border: none;
@@ -1322,10 +1353,10 @@ button,
   font-weight: 600;
   font-size: 14px;
   line-height: 150%;
+  background-color: #ffffff;
 }
 
-.book__button:hover,
-.book__button:focus {
+.book button:hover {
   background-color: #011c40;
   color: #f9fbfd;
   outline: 2px solid #f9fbfd;
@@ -1853,7 +1884,7 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  gap: 100px;
+  gap: 8.6%;
   max-width: 1160px;
   margin: 0 auto;
 }
@@ -1925,6 +1956,13 @@ button,
   font-size: 16px;
   line-height: 150%;
   color: #011c40;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.map__phone:hover {
+  text-decoration: underline;
 }
 
 .map__phone-icon {
@@ -2052,6 +2090,7 @@ footer {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  position: relative;
 }
 
 .header.is-hidden {
@@ -2113,6 +2152,11 @@ footer {
   margin-top: 10px;
   padding: 0;
   gap: 33px;
+  overflow-y: scroll;
+}
+
+.header__list::-webkit-scrollbar {
+  width: 0;
 }
 
 .header__link {
@@ -2196,6 +2240,69 @@ footer {
   transition: opacity 0.3s ease 0.2s;
 }
 
+.form-succes {
+  display: none;
+  position: fixed;
+  font-size: 24px;
+  padding: 15px 10px;
+  background-color: #ffffff;
+  color: #000000;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  border: 2px solid #000000;
+  -webkit-box-shadow: 5px 5px 10px #000000;
+  box-shadow: 5px 5px 10px #000000;
+}
+
+.form-succes--view {
+  display: block;
+}
+
+/* @mixin hover-focus {
+    @media (hover: hover) {
+      &:hover:not(.focus-visible) {
+        @content;
+      }
+    }
+
+    &.focus-visible:focus {
+      @content;
+    }
+  }
+*/
+
+/*  @include hover-focus {
+      opacity: 0.8;
+    }
+*/
+
+/*@mixin hover {
+    @media (hover: hover) {
+      &:hover:not(.focus-visible) {
+        @content;
+      }
+    }
+  }
+*/
+
+/*@mixin focus {
+    &.focus-visible:focus {
+      @content;
+    }
+  }
+*/
+
+/*@mixin active {
+    &.focus-visible:active {
+      @content;
+    }
+  }
+*/
+
 @media (max-width: 1023px) {
   .container {
     padding: 0 24px;
@@ -2208,9 +2315,9 @@ footer {
   }
 
   .info__back {
-    -o-object-fit: cover;
-    object-fit: cover;
-    height: 638px;
+    -o-object-fit: fill;
+    object-fit: fill;
+    height: 664px;
   }
 
   .info__title {
@@ -2458,7 +2565,7 @@ footer {
   }
 
   .info__back {
-    height: 500px;
+    height: 538px;
   }
 
   .info__title {
@@ -2481,8 +2588,10 @@ footer {
   }
 
   .description h2 {
+    max-width: none;
     font-size: 24px;
     margin-bottom: 18px;
+    margin-right: 50px;
   }
 
   .feature {
@@ -2575,7 +2684,7 @@ footer {
     margin-right: 8px;
   }
 
-  .book__button {
+  .book button {
     margin-top: 20px;
   }
 
@@ -2643,6 +2752,10 @@ footer {
 
   .footer__social {
     margin-left: -5px;
+    min-width: none;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
 
   .header {
@@ -2795,5 +2908,6 @@ footer {
 
   .header__link:hover:not(.focus-visible):not(span) {
     border-bottom: 2px solid #f9fbfd;
+    margin-bottom: -2px;
   }
 }

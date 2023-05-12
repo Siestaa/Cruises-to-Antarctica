@@ -25,10 +25,10 @@
         </a>
         <nav class="header__nav">
           <ul class="header__list">
-            <li class="header__item"><a class="header__link" href="#feature">Преимущества</a></li>
-            <li class="header__item"><a class="header__link" href="#">Направления</a></li>
-            <li class="header__item"><a class="header__link" href="#cruises">Ближайшие круизы</a></li>
-            <li class="header__item"><a class="header__link" href="#contact">Контакты</a></li>
+            <li class="header__item"><a class="header__link" href="#feature" data-close-menu>Преимущества</a></li>
+            <li class="header__item"><a class="header__link" href="#cruises" data-close-menu>Направления</a></li>
+            <li class="header__item"><a class="header__link" href="#cruises" data-close-menu>Ближайшие круизы</a></li>
+            <li class="header__item"><a class="header__link" href="#contact" data-close-menu>Контакты</a></li>
           </ul>
         </nav>
         <button class="header__burger" type="button" aria-label="Переключатель отображения меню" aria-pressed="false"
@@ -45,19 +45,26 @@
       </header>
     </div>
     <main>
-      <div class="container">
-        <section class="info">
-          <picture>
-            <source type="image/webp" media="(max-width: 767px)"
-              srcset="./img/intro-back-mobile.webp 1x, ./img/intro-back-mobile@2x.webp 2x">
-            <source type="image/webp" srcset="./img/intro-back.webp 1x, ./img/intro-back@2x.webp 2x">
-            <source media="(max-width: 767px)" srcset="./img/intro-back-mobile.jpg 1x, ./img/intro-back-mobile@2x.jpg 2x">
-            <img class="info__back" src="./img/intro-back.jpg" srcset="./img/intro-back@2x.jpg 2x" width="1366"
-              height="650" alt="">
-          </picture>
-          <h1 class="info__title">Круизы в&nbsp;Антарктику</h1>
-          <p class="info__text">Волшебный мир айсбергов и&nbsp;пингвинов</p>
-        </section>
+      <div class="section-wrapper">
+        <div class="container">
+          <section class="info">
+            <picture>
+              <source type="image/webp" media="(max-width: 767px)"
+                srcset="./img/intro-back-mobile.webp 1x, ./img/intro-back-mobile@2x.webp 2x">
+              <source type="image/webp" media="(max-width: 1023px)"
+                srcset="./img/intro-back-tablet.webp 1x, ./img/intro-back-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="./img/intro-back.webp 1x, ./img/intro-back@2x.webp 2x">
+              <source media="(max-width: 767px)"
+                srcset="./img/intro-back-mobile.jpg 1x, ./img/intro-back-mobile@2x.jpg 2x">
+              <source media="(max-width: 1023px)"
+                srcset="./img/intro-back-tablet.jpg 1x, ./img/intro-back-tablet@2x.jpg 2x">
+              <img class="info__back" src="./img/intro-back.jpg" srcset="./img/intro-back@2x.jpg 2x" width="1366"
+                height="650" alt="">
+            </picture>
+            <h1 class="info__title">Круизы в&nbsp;Антарктику</h1>
+            <p class="info__text">Волшебный мир айсбергов и&nbsp;пингвинов</p>
+          </section>
+        </div>
       </div>
       <div class="container">
         <section class="description">
@@ -70,10 +77,13 @@
           <picture>
             <source type="image/webp" media="(max-width: 767px)"
               srcset="./img/pingvi-mobile.webp 1x, ./img/pingvi-mobile@2x.webp 2x">
+            <source type="image/webp" media="(max-width: 1023px)"
+              srcset="./img/pingvi-tablet.webp 1x, ./img/pingvi-tablet@2x.webp 2x">
             <source type="image/webp" srcset="./img/pingvi.webp 1x, ./img/pingvi@2x.webp 2x">
             <source media="(max-width: 767px)" srcset="./img/pingvi-mobile.jpg 1x, ./img/pingvi-mobile@2x.jpg 2x">
-            <img src="./img/pingvi.jpg" srcset="./img/pingvi@2x.jpg 2x" width="560" height="301"
-              alt="Фото пингвинов." loading="lazy">
+            <source media="(max-width: 1023px)" srcset="./img/pingvi-tablet.jpg 1x, ./img/pingvi-tablet@2x.jpg 2x">
+            <img src="./img/pingvi.jpg" srcset="./img/pingvi@2x.jpg 2x" width="560" height="301" alt="Фото пингвинов."
+              loading="lazy">
           </picture>
         </section>
       </div>
@@ -82,9 +92,14 @@
           <section class="feature" id="feature">
             <picture>
               <source type="image/webp" media="(max-width: 767px)"
-              srcset="./img/feature-back-mobile.webp 1x, ./img/feature-back-mobile@2x.webp 2x">
+                srcset="./img/feature-back-mobile.webp 1x, ./img/feature-back-mobile@2x.webp 2x">
+              <source type="image/webp" media="(max-width: 1023px)"
+                srcset="./img/feature-back-tablet.webp 1x, ./img/feature-back-tablet@2x.webp 2x">
               <source type="image/webp" srcset="./img/feature-back.webp 1x, ./img/feature-back@2x.webp 2x">
-              <source media="(max-width: 767px)" srcset="./img/feature-back-mobile.jpg 1x, ./img/feature-back-mobile@2x.jpg 2x">
+              <source media="(max-width: 767px)"
+                srcset="./img/feature-back-mobile.jpg 1x, ./img/feature-back-mobile@2x.jpg 2x">
+              <source media="(max-width: 1023px)"
+                srcset="./img/feature-back-tablet.jpg 1x, ./img/feature-back-tablet@2x.jpg 2x">
               <img class="feature__back" src="./img/feature-back.jpg" srcset="./img/feature-back@2x.jpg 2x" width="1366"
                 height="562" alt="" loading="lazy">
             </picture>
@@ -127,10 +142,12 @@
           <ul data-list="offers" class="cruises__list">
             <li data-item="cruise" class="cruises__item" tabindex="0">
               <picture>
-                <source data-img="source" type="image/webp" srcset="./img/cruises/astoria.webp 1x, ./img/cruises/astoria@2x.webp 2x">
-                <img data-img="img" src="./img/cruises/astoria.jpg" srcset="./img/cruises/astoria@2x.jpg 2x" width="260" height="386" alt="" loading="lazy">
+                <source data-img="source" type="image/webp"
+                  srcset="./img/cruises/astoria.webp 1x, ./img/cruises/astoria@2x.webp 2x">
+                <img data-img="img" src="./img/cruises/astoria.jpg" srcset="./img/cruises/astoria@2x.jpg 2x" width="260"
+                  height="386" alt="" loading="lazy">
               </picture>
-              <h3 data-value="title" class="cruises__item-title">Астория</h3>
+              <h3 data-value="title" class="cruises__item-title">Круиз "Астория"</h3>
               <dt class="cruises__item-option">Маршрут</dt>
               <dd data-value="way" class="cruises__item-value">Аргентина - Фолклендские острова - Антарктида</dd>
               <dt class="cruises__item-option">Порт отправления</dt>
@@ -139,14 +156,16 @@
               <dd data-value="duration" class="cruises__item-value">11 дней</dd>
               <dt class="cruises__item-option">Цена</dt>
               <dd data-value="price" class="cruises__item-value">от 11500 $</dd>
-              <button type="button" class="cruises__button">Забронировать</button>
+              <a href="#" type="button" class="cruises__button">Забронировать</a>
             </li>
             <li data-item="cruise" class="cruises__item" tabindex="0">
               <picture>
-                <source data-img="source" type="image/webp" srcset="./img/cruises/aline.webp 1x, ./img/cruises/aline@2x.webp 2x">
-                <img data-img="img" src="./img/cruises/aline.jpg" srcset="./img/cruises/aline@2x.jpg 2x" width="260" height="386" alt="" loading="lazy">
+                <source data-img="source" type="image/webp"
+                  srcset="./img/cruises/aline.webp 1x, ./img/cruises/aline@2x.webp 2x">
+                <img data-img="img" src="./img/cruises/aline.jpg" srcset="./img/cruises/aline@2x.jpg 2x" width="260"
+                  height="386" alt="" loading="lazy">
               </picture>
-              <h3 data-value="title" class="cruises__item-title">Элайн</h3>
+              <h3 data-value="title" class="cruises__item-title">Круиз "Элайн"</h3>
               <dt class="cruises__item-option">Маршрут</dt>
               <dd data-value="way" class="cruises__item-value">Аргентина - Фолклендские острова - Антарктида - Чили</dd>
               <dt class="cruises__item-option">Порт отправления</dt>
@@ -155,30 +174,35 @@
               <dd data-value="duration" class="cruises__item-value">20 дней</dd>
               <dt class="cruises__item-option">Цена</dt>
               <dd data-value="price" class="cruises__item-value">от 14500 $</dd>
-              <button type="button" class="cruises__button">Забронировать</button>
+              <a href="#" type="button" class="cruises__button">Забронировать</a>
             </li>
             <li data-item="cruise" class="cruises__item" tabindex="0">
               <picture>
-                <source data-img="source" type="image/webp" srcset="./img/cruises/atlantis.webp 1x, ./img/cruises/atlantis@2x.webp 2x">
-                <img data-img="img" src="./img/cruises/atlantis.jpg" srcset="./img/cruises/atlantis@2x.jpg 2x" width="260" height="386" alt="" loading="lazy">
+                <source data-img="source" type="image/webp"
+                  srcset="./img/cruises/atlantis.webp 1x, ./img/cruises/atlantis@2x.webp 2x">
+                <img data-img="img" src="./img/cruises/atlantis.jpg" srcset="./img/cruises/atlantis@2x.jpg 2x"
+                  width="260" height="386" alt="" loading="lazy">
               </picture>
-              <h3 data-value="title" class="cruises__item-title">Атлантис</h3>
+              <h3 data-value="title" class="cruises__item-title">Круиз "Атлантис"</h3>
               <dt class="cruises__item-option">Маршрут</dt>
-              <dd data-value="way" class="cruises__item-value">Аргентина - Южная Георгия и Южные Сандвичевы Острова - Антарктида</dd>
+              <dd data-value="way" class="cruises__item-value">Аргентина - Южная Георгия и Южные Сандвичевы Острова -
+                Антарктида</dd>
               <dt class="cruises__item-option">Порт отправления</dt>
               <dd data-value="port" class="cruises__item-value">Ушуайя</dd>
               <dt class="cruises__item-option">Продолжительность</dt>
               <dd data-value="duration" class="cruises__item-value">15 дней</dd>
               <dt class="cruises__item-option">Цена</dt>
               <dd data-value="price" class="cruises__item-value">от 14500 $</dd>
-              <button type="button" class="cruises__button">Забронировать</button>
+              <a href="#" type="button" class="cruises__button">Забронировать</a>
             </li>
             <li data-item="cruise" class="cruises__item" tabindex="0">
               <picture>
-                <source data-img="source" type="image/webp" srcset="./img/cruises/odisey.webp 1x, ./img/cruises/odisey@2x.webp 2x">
-                <img data-img="img" src="./img/cruises/odisey.jpg" srcset="./img/cruises/odisey@2x.jpg 2x" width="260" height="386" alt="" loading="lazy">
+                <source data-img="source" type="image/webp"
+                  srcset="./img/cruises/odisey.webp 1x, ./img/cruises/odisey@2x.webp 2x">
+                <img data-img="img" src="./img/cruises/odisey.jpg" srcset="./img/cruises/odisey@2x.jpg 2x" width="260"
+                  height="386" alt="" loading="lazy">
               </picture>
-              <h3 data-value="title" class="cruises__item-title">Одиссей</h3>
+              <h3 data-value="title" class="cruises__item-title">Круиз "Одиссей"</h3>
               <dt class="cruises__item-option">Маршрут</dt>
               <dd data-value="way" class="cruises__item-value">Чили - Антарктида</dd>
               <dt class="cruises__item-option">Порт отправления</dt>
@@ -187,30 +211,35 @@
               <dd data-value="duration" class="cruises__item-value">13 дней</dd>
               <dt class="cruises__item-option">Цена</dt>
               <dd data-value="price" class="cruises__item-value">от 9700 $</dd>
-              <button type="button" class="cruises__button">Забронировать</button>
+              <a href="#" type="button" class="cruises__button">Забронировать</a>
             </li>
             <li data-item="cruise" class="cruises__item" tabindex="0">
               <picture>
-                <source data-img="source" type="image/webp" srcset="./img/cruises/olimpiya.webp 1x, ./img/cruises/olimpiya@2x.webp 2x">
-                <img data-img="img" src="./img/cruises/olimpiya.jpg" srcset="./img/cruises/olimpiya@2x.jpg 2x" width="260" height="386" alt="" loading="lazy">
+                <source data-img="source" type="image/webp"
+                  srcset="./img/cruises/olimpiya.webp 1x, ./img/cruises/olimpiya@2x.webp 2x">
+                <img data-img="img" src="./img/cruises/olimpiya.jpg" srcset="./img/cruises/olimpiya@2x.jpg 2x"
+                  width="260" height="386" alt="" loading="lazy">
               </picture>
-              <h3 data-value="title" class="cruises__item-title">Олимпия</h3>
+              <h3 data-value="title" class="cruises__item-title">Круиз "Олимпия"</h3>
               <dt class="cruises__item-option">Маршрут</dt>
-              <dd data-value="way" class="cruises__item-value">Аргентина - Фолклендские острова - Южная Георгия - Антарктида</dd>
+              <dd data-value="way" class="cruises__item-value">Аргентина - Фолклендские острова - Южная Георгия -
+                Антарктида</dd>
               <dt class="cruises__item-option">Порт отправления</dt>
               <dd data-value="port" class="cruises__item-value">Ушуайя</dd>
               <dt class="cruises__item-option">Продолжительность</dt>
               <dd data-value="duration" class="cruises__item-value">21 день</dd>
               <dt class="cruises__item-option">Цена</dt>
               <dd data-value="price" class="cruises__item-value">от 18600 $</dd>
-              <button type="button" class="cruises__button">Забронировать</button>
+              <a href="#" type="button" class="cruises__button">Забронировать</a>
             </li>
             <li data-item="cruise" class="cruises__item" tabindex="0">
               <picture>
-                <source data-img="source" type="image/webp" srcset="./img/cruises/avrora.webp 1x, ./img/cruises/avrora@2x.webp 2x">
-                <img data-img="img" src="./img/cruises/avrora.jpg" srcset="./img/cruises/avrora@2x.jpg 2x" width="260" height="386" alt="" loading="lazy">
+                <source data-img="source" type="image/webp"
+                  srcset="./img/cruises/avrora.webp 1x, ./img/cruises/avrora@2x.webp 2x">
+                <img data-img="img" src="./img/cruises/avrora.jpg" srcset="./img/cruises/avrora@2x.jpg 2x" width="260"
+                  height="386" alt="" loading="lazy">
               </picture>
-              <h3 data-value="title" class="cruises__item-title">Аврора</h3>
+              <h3 data-value="title" class="cruises__item-title">Круиз "Аврора"</h3>
               <dt class="cruises__item-option">Маршрут</dt>
               <dd data-value="way" class="cruises__item-value">Аргентина - Антарктида - Чили</dd>
               <dt class="cruises__item-option">Порт отправления</dt>
@@ -219,14 +248,16 @@
               <dd data-value="duration" class="cruises__item-value">14 дней</dd>
               <dt class="cruises__item-option">Цена</dt>
               <dd data-value="price" class="cruises__item-value">от 11700 $</dd>
-              <button type="button" class="cruises__button">Забронировать</button>
+              <a href="#" type="button" class="cruises__button">Забронировать</a>
             </li>
             <li data-item="cruise" class="cruises__item" tabindex="0">
               <picture>
-                <source data-img="source" type="image/webp" srcset="./img/cruises/leonor.webp 1x, ./img/cruises/leonor@2x.webp 2x">
-                <img data-img="img" src="./img/cruises/leonor.jpg" srcset="./img/cruises/leonor@2x.jpg 2x" width="260" height="386" alt="" loading="lazy">
+                <source data-img="source" type="image/webp"
+                  srcset="./img/cruises/leonor.webp 1x, ./img/cruises/leonor@2x.webp 2x">
+                <img data-img="img" src="./img/cruises/leonor.jpg" srcset="./img/cruises/leonor@2x.jpg 2x" width="260"
+                  height="386" alt="" loading="lazy">
               </picture>
-              <h3 data-value="title" class="cruises__item-title">Леонор</h3>
+              <h3 data-value="title" class="cruises__item-title">Круиз "Леонор"</h3>
               <dt class="cruises__item-option">Маршрут</dt>
               <dd data-value="way" class="cruises__item-value">Чили - Южная Георгия - Антарктида - Аргентина</dd>
               <dt class="cruises__item-option">Порт отправления</dt>
@@ -235,14 +266,16 @@
               <dd data-value="duration" class="cruises__item-value">17 дней</dd>
               <dt class="cruises__item-option">Цена</dt>
               <dd data-value="price" class="cruises__item-value">от 12500 $</dd>
-              <button type="button" class="cruises__button">Забронировать</button>
+              <a href="#" type="button" class="cruises__button">Забронировать</a>
             </li>
             <li data-item="cruise" class="cruises__item" tabindex="0">
               <picture>
-                <source data-img="source" type="image/webp" srcset="./img/cruises/minion.webp 1x, ./img/cruises/minion@2x.webp 2x">
-                <img data-img="img" src="./img/cruises/minion.jpg" srcset="./img/cruises/minion@2x.jpg 2x" width="260" height="386" alt="" loading="lazy">
+                <source data-img="source" type="image/webp"
+                  srcset="./img/cruises/minion.webp 1x, ./img/cruises/minion@2x.webp 2x">
+                <img data-img="img" src="./img/cruises/minion.jpg" srcset="./img/cruises/minion@2x.jpg 2x" width="260"
+                  height="386" alt="" loading="lazy">
               </picture>
-              <h3 data-value="title" class="cruises__item-title">Минион - 1</h3>
+              <h3 data-value="title" class="cruises__item-title">Круиз "Минион - 1"</h3>
               <dt class="cruises__item-option">Маршрут</dt>
               <dd data-value="way" class="cruises__item-value">Аргентина - Антарктида</dd>
               <dt class="cruises__item-option">Порт отправления</dt>
@@ -251,7 +284,7 @@
               <dd data-value="duration" class="cruises__item-value">11 дней</dd>
               <dt class="cruises__item-option">Цена</dt>
               <dd data-value="price" class="cruises__item-value">от 12300 $</dd>
-              <button type="button" class="cruises__button">Забронировать</button>
+              <a href="#" type="button" class="cruises__button">Забронировать</a>
             </li>
           </ul>
         </section>
@@ -332,7 +365,8 @@
                 alt="" loading="lazy">
             </picture>
             <iframe class="map__frame"
-              src="https://yandex.ru/map-widget/v1/?um=constructor%3A48136933732f121b5af589f45ea47d13b030829420db6ec2e1ecff9b849f7f9b&amp;source=constructor"></iframe>
+              src="https://yandex.ru/map-widget/v1/?um=constructor%3A48136933732f121b5af589f45ea47d13b030829420db6ec2e1ecff9b849f7f9b&amp;source=constructor"
+              loading="lazy"></iframe>
           </div>
           <div class="map__text-wrapper">
             <h2 class="map__title visually-hidden">Как нас найти.</h2>
@@ -411,53 +445,9 @@
       </div>
     </footer>
   </div>
-  <!-- Модалки -->
-  <div class="modal modal--preload" data-modal="book">
-    <div class="modal__wrapper">
-      <div class="modal__overlay" data-close-modal></div>
-      <div class="modal__content">
-        <p class="modal__description">Обычная модалка</p>
-        <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-          <svg width="15" height="15">
-            <use xlink:href="./img/sprite.svg#icon-close"></use>
-          </svg>
-        </button>
-      </div>
-    </div>
+  <div class="form-succes">
+    <p>Вам скоро перезвонят. Подождите пожалуйста. Пингвины не улетят.</p>
   </div>
-
-  <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
-    <div class="modal__wrapper">
-      <div class="modal__overlay" data-close-modal></div>
-      <div class="modal__content">
-        <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл
-        </p>
-        <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-          <svg width="15" height="15">
-            <use xlink:href="./img/sprite.svg#icon-close"></use>
-          </svg>
-        </button>
-      </div>
-    </div>
-  </div>
-  <template id="cruise">
-    <li data-item="cruise" class="cruises__item" tabindex="0">
-      <picture>
-        <source data-img="source" type="image/webp" srcset="">
-        <img data-img="img" src="" srcset="" width="260" height="386" alt="" loading="lazy">
-      </picture>
-      <h3 data-value="title" class="cruises__item-title"></h3>
-      <dt class="cruises__item-option">Маршрут</dt>
-      <dd data-value="way" class="cruises__item-value"></dd>
-      <dt class="cruises__item-option">Порт отправления</dt>
-      <dd data-value="port" class="cruises__item-value"></dd>
-      <dt class="cruises__item-option">Продолжительность</dt>
-      <dd data-value="duration" class="cruises__item-value"></dd>
-      <dt class="cruises__item-option">Цена</dt>
-      <dd data-value="price" class="cruises__item-value"></dd>
-      <button type="button" class="cruises__button">Забронировать</button>
-    </li>
-  </template>
 
   <script src="js/vendor.min.js"></script>
   <script src="js/main.min.js"></script>

@@ -78,3 +78,7 @@
 .js-focus-visible :focus:not(.focus-visible) {
   outline: none;
 }
+
+button {
+  user-select: none;
+}

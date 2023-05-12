@@ -41,6 +41,7 @@ export class Form {
     form.querySelectorAll('.is-invalid').forEach((item) => item.classList.remove('is-invalid'));
     form.querySelectorAll('.is-valid').forEach((item) => item.classList.remove('is-valid'));
     form.querySelectorAll('.input-message').forEach((item) => item.remove());
+    form.querySelector('[data-icon="checkbox"]').classList.add('book__checkbox-icon--hide');
     setTimeout(() => {
       this._resetSelects(form);
     });
@@ -61,6 +62,8 @@ export class Form {
   _onFormSubmit(event, callback = null) {
     if (this.validateForm(event.target) && callback) {
       this._callbacks[callback].successCallback(event);
+      document.querySelector('.form-succes').classList.add('form-succes--view');
+      setTimeout(() => document.querySelector('.form-succes').classList.remove('form-succes--view'), 2000);
       if (this._callbacks[callback].reset) {
         setTimeout(() => {
           this.reset(event.target);
@@ -93,6 +96,7 @@ export class Form {
     form.addEventListener('submit', (event) => {
       event.preventDefault();
       this._onFormSubmit(event, callback);
+      form.querySelector('button').blur();
     });
 
     form.addEventListener('input', (event) => {
