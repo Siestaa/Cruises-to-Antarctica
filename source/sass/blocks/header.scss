@@ -24,15 +24,17 @@
 
   &__logo {
     margin: 0;
+    min-width: 70px;
     fill: $color-text-white;
+    margin-right: 20px;
 
     @include vp-1023 {
-      width: 38px;
+      min-width: 38px;
       height: 20px;
     }
 
     @include vp-767 {
-      width: 42px;
+      min-width: 42px;
       height: 22px;
     }
 

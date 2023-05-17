@@ -222,7 +222,8 @@
   font-weight: 600;
   font-size: 14px;
   line-height: 150%;
-  background-color: $color-default-white;
+  background-color: $color-text-white;
+  color: $color-text-black;
 
   @include vp-767 {
     margin-top: 20px;

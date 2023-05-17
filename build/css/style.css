@@ -34,6 +34,9 @@ body {
 
 main {
   display: block;
+  position: relative;
+  top: 0;
+  left: 0;
 }
 
 /**
@@ -586,6 +589,11 @@ button,
   background-color: #f9fbfd;
 }
 
+.section-wrapper--intro {
+  top: 0;
+  left: 0;
+}
+
 .rouble {
   font-family: "Rouble", "Arial", sans-serif;
   /* stylelint-disable */
@@ -1000,9 +1008,10 @@ button {
 
 .cruises__item {
   width: 100%;
-  height: 386px;
+  max-height: 386px;
   position: relative;
   padding: 28px 25px;
+  padding-top: 137.69%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1027,10 +1036,18 @@ button {
   -ms-flex-pack: start;
   justify-content: flex-start;
   padding: 28px 25px;
+  padding-top: 137.69%;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
   outline: none;
+}
+
+.cruises__item:hover .cruises__item-content,
+.cruises__item:focus .cruises__item-content {
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
 }
 
 .cruises__item:hover img,
@@ -1068,6 +1085,35 @@ button {
   display: -ms-flexbox;
   display: flex;
   margin-top: 12px;
+}
+
+.cruises__item-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  padding: 28px 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.cruises__item-content::after {
+  content: " ";
+  display: block;
+  width: 100%;
+  min-height: 1px;
 }
 
 .cruises img {
@@ -1128,6 +1174,7 @@ button {
   padding: 10px 0;
   justify-self: flex-end;
   cursor: pointer;
+  margin-bottom: 34px;
 }
 
 .cruises__button:hover {
@@ -1353,7 +1400,8 @@ button {
   font-weight: 600;
   font-size: 14px;
   line-height: 150%;
-  background-color: #ffffff;
+  background-color: #f9fbfd;
+  color: #011c40;
 }
 
 .book button:hover {
@@ -2101,7 +2149,9 @@ footer {
 
 .header__logo {
   margin: 0;
+  min-width: 70px;
   fill: #f9fbfd;
+  margin-right: 20px;
 }
 
 .is-open .header__logo {
@@ -2317,7 +2367,7 @@ footer {
   .info__back {
     -o-object-fit: fill;
     object-fit: fill;
-    height: 664px;
+    height: 114%;
   }
 
   .info__title {
@@ -2400,10 +2450,20 @@ footer {
 
   .cruises__item {
     padding: 30px 35px 28px;
+    padding-top: 115.87%;
   }
 
   .cruises__item:hover {
-    padding: 30px 35px 35px;
+    padding: 30px 35px 28px;
+    padding-top: 115.87%;
+  }
+
+  .cruises__item-content {
+    padding: 30px 35px 28px;
+  }
+
+  .cruises__item-content:hover {
+    padding: 30px 35px 28px;
   }
 
   .cruises__item-title {
@@ -2524,7 +2584,7 @@ footer {
   }
 
   .header__logo {
-    width: 38px;
+    min-width: 38px;
     height: 20px;
   }
 
@@ -2565,7 +2625,7 @@ footer {
   }
 
   .info__back {
-    height: 538px;
+    height: 116%;
   }
 
   .info__title {
@@ -2629,9 +2689,19 @@ footer {
 
   .cruises__item {
     padding: 30px 25px 27px;
+    padding-top: 132.96%;
   }
 
   .cruises__item:hover {
+    padding: 30px 25px 27px;
+    padding-top: 132.96%;
+  }
+
+  .cruises__item-content {
+    padding: 30px 25px 27px;
+  }
+
+  .cruises__item-content:hover {
     padding: 30px 25px 27px;
   }
 
@@ -2763,7 +2833,7 @@ footer {
   }
 
   .header__logo {
-    width: 42px;
+    min-width: 42px;
     height: 22px;
   }
 

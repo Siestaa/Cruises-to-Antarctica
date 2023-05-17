@@ -48,9 +48,10 @@
 
 .cruises__item {
   width: 100%;
-  height: 386px;
+  max-height: 386px;
   position: relative;
   padding: 28px 25px;
+  padding-top: 137.69%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -65,8 +66,13 @@
     background-color: $color-text-black;
     justify-content: flex-start;
     padding: 28px 25px;
+    padding-top: 137.69%;
     transition: 0.5s;
     outline: none;
+
+    & .cruises__item-content {
+      justify-content: flex-start;
+    }
 
     & img {
       opacity: 0;
@@ -97,9 +103,49 @@
 
   @include vp-1023 {
     padding: 30px 35px 28px;
+    padding-top: 115.87%;
 
     &:hover {
-      padding: 30px 35px 35px;
+      padding: 30px 35px 28px;
+      padding-top: 115.87%;
+    }
+  }
+
+  @include vp-767 {
+    padding: 30px 25px 27px;
+    padding-top: 132.96%;
+
+    &:hover {
+      padding: 30px 25px 27px;
+      padding-top: 132.96%;
+    }
+  }
+}
+
+.cruises__item-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.5s;
+  padding: 28px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  &::after {
+    content: " ";
+    display: block;
+    width: 100%;
+    min-height: 1px;
+  }
+
+  @include vp-1023 {
+    padding: 30px 35px 28px;
+
+    &:hover {
+      padding: 30px 35px 28px;
     }
   }
 
@@ -171,6 +217,9 @@
   padding: 10px 0;
   justify-self: flex-end;
   cursor: pointer;
+  margin-bottom: 34px;
+
+
 
 
   &:hover {
